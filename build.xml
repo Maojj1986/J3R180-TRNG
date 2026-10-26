@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="PureTRNG" default="build" basedir=".">
+    <target name="build">
+        <taskdef name="javacard" classname="pro.javacard.ant.JavaCard" classpath="ant-javacard.jar"/>
+        <javacard jckit="${env.JC_HOME}">
+            <cap output="PureTRNG.cap" sources="src" aid="A00000009954524E47" version="1.0">
+                <applet class="puretrng.PureTRNGApplet" aid="A00000009954524E4701"/>
+            </cap>
+        </javacard>
+    </target>
+</project>
